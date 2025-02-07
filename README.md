@@ -52,9 +52,9 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 
 ## Technológiai követelmények
 
-- **PHP**
-- **MySQL**
-- **Composer***
+- PHP
+- MySQL
+- Composer
 
 ## Értékelési szempontok
 
