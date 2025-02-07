@@ -52,8 +52,8 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 
 ## Technológiai követelmények
 
-- PHP
-- MySQL
+- PHP (8.3 verzóval tesztelve)
+- MySQL (8.0 verzióval tesztelve) 
 - Composer
 
 ## Értékelési szempontok
@@ -63,6 +63,9 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 - Objektumorientált programozás
 - Hibakezelés
 - Kódminőség
+
+**A program DEMO változata a következő urlen probálható ki:**
+http://nzoltan2.nhely.hu/webshop_cart_demo/
 
 ## Adatséma
 
