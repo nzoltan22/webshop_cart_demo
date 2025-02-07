@@ -110,7 +110,10 @@ A többi kontroller az AJAX hívásokat kezeli, néhányuk a Model-ek segítség
 ## Telepítési útmutató
 
 1. A mellékelt **SQL fájlt** egy MySQL adatbázisba kell feltölteni. Ha nincs adatbázis, akkor `webshop_cart_demo` néven hozza létre.
-2. A forráskódot egy könyvtárba kell másolni.
+2. Letöltés után a projekt könyvtárában a vendor könyvtár létrehozásáához a composer update parancs kiadása szükséges.
 3. A **`config.php`** fájlban be kell állítani az adatbázis elérési adatait.
 4. Az Apache szervert úgy kell konfigurálni, hogy a **.htaccess** fájlt kezelje.
+5. A php.ini-ben a short_open_tag=On beállítás szükséges.
+
+   
 
