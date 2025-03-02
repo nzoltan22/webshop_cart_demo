@@ -53,7 +53,7 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 ## Technológiai követelmények
 
 - PHP (8.3 verzóval tesztelve)
-- MySQL (8.0 verzióval tesztelve) 
+- PgSQL (11.22 verzióval tesztelve) 
 - Composer
 
 ## Értékelési szempontok
@@ -66,7 +66,7 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 
 **A program DEMO változata a következő urlen probálható ki:**
 
-http://nzoltan2.nhely.hu/webshop_cart_demo/
+http://nzoltan3.nhely.hu/webshop_cart_demo/
 
 ## Adatséma
 
@@ -74,16 +74,16 @@ Az adatbázis két táblát tartalmaz:
 
 ### 1. `cartsave` – A felhasználók kosarának állapotát menti session ID alapján.
 
-- `sessionid` (VARCHAR 200, PRIMARY KEY) – Azonosító a felhasználó munkamenetéhez.
+- `sessionid` (CHARACTER 200, PRIMARY KEY) – Azonosító a felhasználó munkamenetéhez.
 - `data` (TEXT) – A kosár tartalma szerializált formában.
 
 ### 2. `products` – A webshop termékeit tárolja.
 
-- `id` (INT, PRIMARY KEY, AUTO\_INCREMENT) – Egyedi azonosító.
-- `title` (VARCHAR 100) – Termék címe.
-- `author` (VARCHAR 100) – Szerző neve.
-- `publisher` (VARCHAR 20) – Kiadó neve.
-- `price` (INT) – Ár forintban.
+- `id` (INTEGER, PRIMARY KEY, AUTO\_INCREMENT) – Egyedi azonosító.
+- `title` (CHARACTER 100) – Termék címe.
+- `author` (CHARACTER 100) – Szerző neve.
+- `publisher` (CHARACTER 20) – Kiadó neve.
+- `price` (INTEGER) – Ár forintban.
 
 ## Rendszerterv
 
