@@ -46,14 +46,14 @@ A demo webshopban az alábbi termékek megvásárlására van lehetőség:
 ## Architektúra
 
 - AJAX hívásokkal működő webshop.
-- Háttérrendszer MySQL adatbázist használ.
+- Háttérrendszer PostgreSQL adatbázist használ.
 - Háttérrendszer végzi a kosár és kedvezmények számítását.
 - Egységtesztek a kosár végösszegének ellenőrzésére.
 
 ## Technológiai követelmények
 
 - PHP (8.3 verzóval tesztelve)
-- PgSQL (11.22 verzióval tesztelve) 
+- PostgreSQL (11.22 verzióval tesztelve) 
 - Composer
 
 ## Értékelési szempontok
