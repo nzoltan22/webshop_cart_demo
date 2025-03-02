@@ -11,7 +11,7 @@ class Model {
     function __construct() {
         if(empty(self::$conn)) { 
             self::$conn = new PDO(
-                "mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8" , 
+                "pgsql:host=".DB_HOST.";dbname=".DB_NAME , 
                 DB_USER, 
                 DB_PASS, 
                 array(

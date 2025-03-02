@@ -12,10 +12,16 @@ class mProducts extends \App\Core\Model
     * @param number $order Sirrend ha 0 akkor abc szerint, ha 1 ár szerint
     * @return array Termékek listája
     */
-    public function lista($order) {
+    public function lista($order) 
+    {
         $orderfield = ['title','price'][$order];
         $sql = "
-            SELECT *, if(id=1006, ROUND(0.9*price,0), if(id=1002, price-500, price)) as discprice
+            SELECT *, 
+              CASE 
+                WHEN id = 1006 THEN ROUND(0.9 * price, 0) 
+                WHEN id = 1002 THEN price - 500 
+                ELSE price 
+              END AS discprice
             FROM products 
             ORDER BY $orderfield
         ";
@@ -28,13 +34,19 @@ class mProducts extends \App\Core\Model
     * @param string $ids losárba lévő termékek id-ja
     * @return array Kosár listája
     */
-    public function cartlista($ids) {
+    public function cartlista($ids) 
+    {
         $count = count($ids);
         if($count>0){
             $request = [];
             for($i=0;$i<$count;$i++){
                 $sql = "
-                    SELECT *, if(id=1006, ROUND(0.9*price,0), if(id=1002, price-500, price)) as discprice 
+                    SELECT *, 
+                      CASE 
+                        WHEN id = 1006 THEN ROUND(0.9 * price, 0) 
+                        WHEN id = 1002 THEN price - 500 
+                        ELSE price 
+                      END AS discprice                    
                     FROM products
                     WHERE id=:id 
                 ";
